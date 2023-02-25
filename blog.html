@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="container mx-auto">
+    <header class="mt-5">
+        <div class="bg-slate-300 p-8 flex justify-between rounded-md">
+            <div>
+                <h1 class="text-3xl font-bold">Interactive<span class="block text-xl font-light">Geometry Genius</span></h1>
+            </div>
+            <button onclick="location.href = 'http://127.0.0.1:5500/index.html';" class="bg-blue-700 text-white text-2xl font-medium px-8 rounded-md">Home</button>
+        </div>
+    </header>
+    <main class="mt-5">
+        <div class="my-10">
+            <h1 class="text-4xl bg-teal-400 rounded-t-lg p-4">1. What is DOM? What is the purpose of DOM?</h1>
+            <p class="text-xl border-2 border-teal-400 rounded-b-lg p-4">
+                If we talk about DOM, first we should know the full meaning of DOM. Document Object Model(DOM) is the interface for all the web documents. It helps us change the structure, style and content of the web document. it shows the documents as nodes and objects so that programming languages can interact with the page.
+            </p>
+        </div>
+        <div class="my-10">
+            <h1 class="text-4xl bg-cyan-400 rounded-t-lg p-4">2. How to select element from DOM?</h1>
+            <div class="text-xl border-2 border-cyan-400 rounded-b-lg p-4">
+                <p>there are few away we can select elements from DOM. they are given below-</p>
+                <ul class="list-disc ml-5">
+                    <li>getElementsByTagName()</li>
+                    <li>getElementsByClassName()</li>
+                    <li>getElementById()</li>
+                    <li>querySelector()</li>
+                    <li>querySelectorAll()</li>
+                </ul>
+            </div>
+        </div>
+        <div class="my-10">
+            <h1 class="text-4xl bg-indigo-400 rounded-t-lg p-4">3. What is event Bubble?</h1>
+            <p class="text-xl border-2 border-indigo-400 rounded-b-lg p-4">
+                Event Bubble is a concept. it happens when an element receives an event and that event goes up to the root of the element or root of the DOM Tree.
+            </p>
+        </div>
+        <div class="my-10">
+            <h1 class="text-4xl bg-yellow-400 rounded-t-lg p-4">4. What is callback function? What does it do?</h1>
+            <p class="text-xl border-2 border-yellow-400 rounded-b-lg p-4">
+                Callback function is a function that is passed as an argument to another function. Callback function makes a function run when another function has already completed its execution.
+            </p>
+        </div>
+    </main>
+</body>
+</html>

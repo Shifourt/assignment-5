@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/36d7649642.js" crossorigin="anonymous"></script>
+</head>
+<body class="container mx-auto">
+    <header class="mt-5">
+        <div class="bg-slate-300 p-8 flex justify-between rounded-md">
+            <div>
+                <h1 class="text-3xl font-bold">Interactive<span class="block text-xl font-light">Geometry Genius</span></h1>
+            </div>
+            <button onclick="location.href = 'http://127.0.0.1:5500/blog.html';" class="bg-blue-700 text-white text-2xl font-medium px-8 rounded-md">Blog</button>
+        </div>
+    </header>
+    <main class="my-5">
+        <div class="inline-grid grid-cols-12 gap-4">
+            <!-- cards -->
+            <div class="inline-grid grid-cols-1 col-span-12 lg:grid-cols-3 lg:col-span-9 gap-4">
+                <!-- card -->
+                <!-- Triangle -->
+                <div id="triangle-calculation-card" class="text-center p-6 border-2 border-inherit rounded-md">
+                    <img class="mx-auto mb-5" src="./images/triangle.png" alt="">
+                    <div class="my-2">
+                        <h2 id="triangle-shape" class="text-3xl font-bold mb-1 shape-name">Triangle</h2>
+                        <p>Area (A) = 0.5 x <span id="triangle-first-number-calculation-field-value">b</span> x <span id="triangle-second-number-calculation-field-value">h</span></p>
+                        <!-- editing facilities -->
+                        <p>b = <span id="triangle-first-number-value">0</span>cm h = <span id="triangle-second-number-value">0</span>cm <button id="triangle-editing-btn"><i class="fa-regular fa-pen-to-square"></i></button></p>
+                    </div>
+                    <div id="triangle-editing-field" class="my-2 w-5/6 mx-auto hidden">
+                        <!-- inputs to put information -->
+                        <div class="flex justify-around">
+                            <input id="triangle-first-number-input" class="w-2/6 bg-gray-100 rounded px-2" type="text" placeholder=" b">
+                            <label for="text">cm</label>
+                            <input id="triangle-second-number-input" class="w-2/6 bg-gray-100 rounded px-2" type="text" placeholder=" h">
+                            <label for="text">cm</label>
+                            <!-- button to confirm the amount -->
+                            <button id="triangle-apply-btn" class="bg-blue-700 text-white px-2 ml-1 rounded"><i class="fa-solid fa-check"></i></button>
+                        </div>
+                    </div>
+                    <!-- button to calculate -->
+                    <button id="triangle-submit-btn" class="w-5/6 bg-blue-700 text-white mt-2 py-1 rounded font-semibold">Calculate</button>
+                </div>
+
+                <!-- Rectangle -->
+                <div id="rectangle-calculation-card" class="text-center p-6 border-2 border-inherit rounded-md">
+                    <img class="mx-auto mb-5" src="./images/rectangle.png" alt="">
+                    <div class="my-2">
+                        <h2 id="rectangle-shape" class="text-3xl font-bold mb-1 shape-name">Rectangle</h2>
+                        <p>Area (A) = <span id="rectangle-first-number-calculation-field-value">w</span> x <span id="rectangle-second-number-calculation-field-value">l</span></p>
+                        <!-- editing facilities -->
+                        <p>w = <span id="rectangle-first-number-value">0</span>cm l = <span id="rectangle-second-number-value">0</span>cm <button id="rectangle-editing-btn"><i class="fa-regular fa-pen-to-square"></i></button></p>
+                    </div>
+                    <div id="rectangle-editing-field" class="my-2 w-3/4 mx-auto hidden">
+                        <!-- inputs to put information -->
+                        <div class="flex justify-around">
+                            <input id="rectangle-first-number-input" class="w-2/6 bg-gray-100 rounded px-2" type="text" placeholder=" w">
+                            <label for="text">cm</label>
+                            <input id="rectangle-second-number-input" class="w-2/6 bg-gray-100 rounded px-2" type="text" placeholder=" l">
+                            <label for="text">cm</label>
+                            <!-- button to confirm the amount -->
+                            <button id="rectangle-apply-btn" class="bg-blue-700 text-white px-2 ml-1 rounded"><i class="fa-solid fa-check"></i></button>
+                        </div>
+                    </div>
+                    <!-- button to calculate -->
+                    <button id="rectangle-submit-btn" class="w-5/6 bg-blue-700 text-white mt-2 py-1 rounded font-semibold">Calculate</button>
+                </div>
+
+                <!-- Parallelogram -->
+                <div class="text-center p-6 border-2 border-inherit rounded-md">
+                    <img class="mx-auto mb-5" src="./images/parallelogram.png" alt="">
+                    <div class="my-2">
+                        <h2 id="parallelogram-shape" class="text-3xl font-bold mb-1 shape-name">Parallelogram</h2>
+                        <p>Area (A) = <span id="parallelogram-first-number-calculation-field-value">b</span> x <span id="parallelogram-second-number-calculation-field-value">h</span></p>
+                        <!-- editing facilities -->
+                        <p>b = <span id="parallelogram-first-number-value">0</span>cm h = <span id="parallelogram-second-number-value">0</span>cm <button id="parallelogram-editing-btn"><i class="fa-regular fa-pen-to-square"></i></button></p>
+                    </div>
+                    <div id="parallelogram-editing-field" class="my-2 w-3/4 mx-auto hidden">
+                        <!-- inputs to put information -->
+                        <div class="flex justify-around">
+                            <input id="parallelogram-first-number-input" class="w-2/6 bg-gray-100 rounded px-2" type="text" placeholder=" b">
+                            <label for="text">cm</label>
+                            <input id="parallelogram-second-number-input" class="w-2/6 bg-gray-100 rounded px-2" type="text" placeholder=" h">
+                            <label for="text">cm</label>
+                            <!-- button to confirm the amount -->
+                            <button id="parallelogram-apply-btn" class="bg-blue-700 text-white px-2 ml-1 rounded"><i class="fa-solid fa-check"></i></button>
+                        </div>
+                    </div>
+                    <!-- button to calculate -->
+                    <button id="parallelogram-submit-btn" class="w-5/6 bg-blue-700 text-white mt-2 py-1 rounded font-semibold">Calculate</button>
+                </div>
+                <!-- Rhombus -->
+                <div class="text-center p-6 border-2 border-inherit rounded-md">
+                    <img class="mx-auto mb-5" src="./images/rhombus.png" alt="">
+                    <div class="my-2">
+                        <h2 id="rhombus-shape" class="text-3xl font-bold mb-1 shape-name">Rhombus</h2>
+                        <p>Area (A) = 0.5 x <span id="rhombus-first-number-calculation-field-value">d1</span> x <span id="rhombus-second-number-calculation-field-value">d2</span></p>
+                        <!-- editing facilities -->
+                        <p>d1 = <span id="rhombus-first-number-value">0</span>cm d2 = <span id="rhombus-second-number-value">0</span>cm <button id="rhombus-editing-btn"><i class="fa-regular fa-pen-to-square"></i></button></p>
+                    </div>
+                    <div id="rhombus-editing-field" class="my-2 w-3/4 mx-auto hidden">
+                        <!-- inputs to put information -->
+                        <div class="flex justify-around">
+                            <input id="rhombus-first-number-input" class="w-2/6 bg-gray-100 rounded px-2" type="text" placeholder=" d1">
+                            <label for="text">cm</label>
+                            <input id="rhombus-second-number-input" class="w-2/6 bg-gray-100 rounded px-2" type="text" placeholder=" d2">
+                            <label for="text">cm</label>
+                            <!-- button to confirm the amount -->
+                            <button id="rhombus-apply-btn" class="bg-blue-700 text-white px-2 ml-1 rounded"><i class="fa-solid fa-check"></i></button>
+                        </div>
+                    </div>
+                    <!-- button to calculate -->
+                    <button id="rhombus-submit-btn" class="w-5/6 bg-blue-700 text-white mt-2 py-1 rounded font-semibold">Calculate</button>
+                </div>
+                <!-- Pentagon -->
+                <div class="text-center p-6 border-2 border-inherit rounded-md">
+                    <img class="mx-auto mb-5" src="./images/pentagon.png" alt="">
+                    <div class="my-2">
+                        <h2 id="pentagon-shape" class="text-3xl font-bold mb-1 shape-name">Pentagon</h2>
+                        <p>Area (A) = 0.5 x <span id="pentagon-first-number-calculation-field-value">p</span> x <span id="pentagon-second-number-calculation-field-value">b</span></p>
+                        <!-- editing facilities -->
+                        <p>p = <span id="pentagon-first-number-value">0</span>cm b = <span id="pentagon-second-number-value">0</span>cm <button id="pentagon-editing-btn"><i class="fa-regular fa-pen-to-square"></i></button></p>
+                    </div>
+                    <div id="pentagon-editing-field" class="my-2 w-3/4 mx-auto hidden">
+                        <!-- inputs to put information -->
+                        <div class="flex justify-around">
+                            <input id="pentagon-first-number-input" class="w-2/6 bg-gray-100 rounded px-2" type="text" placeholder=" p">
+                            <label for="text">cm</label>
+                            <input id="pentagon-second-number-input" class="w-2/6 bg-gray-100 rounded px-2" type="text" placeholder=" b">
+                            <label for="text">cm</label>
+                             <!-- button to confirm the amount -->
+                            <button id="pentagon-apply-btn" class="bg-blue-700 text-white px-2 ml-1 rounded"><i class="fa-solid fa-check"></i></button>
+                        </div>
+                    </div>
+                    <!-- button to calculate -->
+                    <button id="pentagon-submit-btn" class="w-5/6 bg-blue-700 text-white mt-2 py-1 rounded font-semibold">Calculate</button>
+                </div>
+                <!-- Ellipse -->
+                <div class="text-center p-6 border-2 border-inherit rounded-md">
+                    <img class="mx-auto mb-5" src="./images/ellipse.png" alt="">
+                    <div class="my-2">
+                        <h2 id="ellipse-shape" class="text-3xl font-bold mb-1 shape-name">Ellipse</h2>
+                        <p>Area (A) = <span class="font-semibold text-xl">π</span><span id="ellipse-first-number-calculation-field-value">a</span><span id="ellipse-second-number-calculation-field-value">b</span></p>
+                        <!-- editing facilities -->
+                        <p>b = <span id="ellipse-first-number-value">0</span> cm h = <span id="ellipse-second-number-value">0</span> cm <button id="ellipse-editing-btn"><i class="fa-regular fa-pen-to-square"></i></button></p>
+                    </div>
+                    <div id="ellipse-editing-field" class="my-2 w-3/4 mx-auto hidden">
+                        <!-- inputs to put information -->
+                        <div class="flex justify-around">
+                            <input id="ellipse-first-number-input" class="w-2/6 bg-gray-100 rounded px-2" type="text" placeholder=" b">
+                            <label for="text">cm</label>
+                            <input id="ellipse-second-number-input" class="w-2/6 bg-gray-100 rounded px-2" type="text" placeholder=" h">
+                            <label for="text">cm</label>
+                            <!-- button to confirm the amount -->
+                            <button id="ellipse-apply-btn" class="bg-blue-700 text-white px-2 ml-1 rounded"><i class="fa-solid fa-check"></i></button>
+                        </div>
+                    </div>
+                    <!-- button to calculate -->
+                    <button id="ellipse-submit-btn" class="w-5/6 bg-blue-700 text-white mt-2 py-1 rounded font-semibold">Calculate</button>
+                </div>
+                
+            </div>
+            <div class="h-96 border-2 border-inherit rounded-md overflow-auto col-span-12 lg:col-span-3">
+                <h2 class="text-center font-semibold text-xl my-3">Area Calculation</h2>
+                <ol id="output-list" class="list-decimal"></ol>
+            </div>
+        </div>
+    </main>
+    <script src="./js/colorful.js"></script>
+    <script src="./js/editingFieldSystem.js"></script>
+    <script src="./js/informationApplying.js"></script>
+    <script src="./js/calculate.js"></script>
+</body>
+</html> 
